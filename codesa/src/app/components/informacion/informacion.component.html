@@ -1,0 +1,62 @@
+
+    <p-panel header="Buscar"styles='max' >
+        <br>
+        <br>
+        <div>
+            <p-button label="Search" icon="pi pi-search" (onClick)="getpersonas()"></p-button><br>
+        <br>
+        <input type="text" pInputText name="nombre" [(ngModel)]='usuario.nombre' />
+        </div>
+        
+    </p-panel>
+
+
+
+<br>
+<br> 
+<p-panel header="Lista">
+    <br>
+    <br>
+    <button pButton type="button" label="Buscar" ></button><br>
+    <br>
+
+    <p-table>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Rol</th>
+                <th>Nombre</th>
+                <th>Id</th>
+                
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.Id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.quantity}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+    
+</p-panel>
+<br>
+<br>
+<br>
+
+<p-panel header="Informacion">
+    <br>
+    <br>
+    <button pButton type="button" label="Buscar"></button>&nbsp;
+    <button pButton type="button" label="Eliminar" class="p-button-danger" icon="pi pi-times" ></button><br>&nbsp;
+    <br>
+    <br>
+    <input type="text" pInputText />
+    <br>
+    <br>
+    <input type="text" pInputText />
+<br>
+<br>
+    <input type="text" pInputText />
+    <br>
+</p-panel>
